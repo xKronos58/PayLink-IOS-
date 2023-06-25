@@ -196,9 +196,10 @@ struct ContentView: View {
 struct hambMenu: View {
                     var body: some View{
                         VStack{
+                            //Background ellipse
                             Rectangle()
                               .foregroundColor(.clear)
-                              .frame(width: 727, height: 727)
+                              .frame(width: 1227, height: 1227)
                               .background(
                                 LinearGradient(
                                   stops: [
@@ -209,7 +210,9 @@ struct hambMenu: View {
                                   endPoint: UnitPoint(x: 0.9, y: -0.13)
                                 )
                               )
+                              .padding(.top, 700)
                               .cornerRadius(727)
+                            //Background ellipse 2
                             Rectangle()
                               .foregroundColor(.clear)
                               .frame(width: 496, height: 496)
@@ -225,6 +228,8 @@ struct hambMenu: View {
                               )
                               .cornerRadius(496)
                             VStack{
+                                
+                                //Title
                                 Text("MENU")
                                     .font(
                                         Font.custom("Inter", size: 36)
@@ -236,67 +241,431 @@ struct hambMenu: View {
                                     .foregroundColor(.black)
                                     .frame(width: 264, height: 75, alignment: .center)
                                     .padding(.bottom, 72)
-                                Text("Split Calc")
-                                    .font(
-                                        Font.custom("Inter", size: 20)
-                                            .weight(.bold)
-                                    )
-                                    .kerning(3.2)
-                                    .multilineTextAlignment(.center)
-                                    .foregroundColor(.black)
-                                    .frame(width: 186, height: 28, alignment: .center)
-                                    .padding(.bottom, 58)
-                                Text("For You")
-                                    .font(
-                                        Font.custom("Inter", size: 20)
-                                            .weight(.bold)
-                                    )
-                                    .kerning(3.2)
-                                    .multilineTextAlignment(.center)
-                                    .foregroundColor(.black)
-                                    .frame(width: 117, height: 28, alignment: .center)
-                                    .padding(.bottom, 58)
-                                Text("Settings")
-                                    .font(
-                                        Font.custom("Inter", size: 20)
-                                            .weight(.bold)
-                                    )
-                                    .kerning(3.2)
-                                    .multilineTextAlignment(.center)
-                                    .foregroundColor(.black)
-                                    .frame(width: 117, height: 28, alignment: .center)
-                                    .padding(.bottom, 58)
-                                Text("Receive ")
-                                    .font(
-                                        Font.custom("Inter", size: 20)
-                                            .weight(.bold)
-                                    )
-                                    .kerning(3.2)
-                                    .multilineTextAlignment(.center)
-                                    .foregroundColor(.black)
-                                    .frame(width: 117, height: 28, alignment: .center)
-                                    .padding(.bottom, 58)
-                                Text("Pay")
-                                    .font(
-                                        Font.custom("Inter", size: 20)
-                                            .weight(.bold)
-                                    )
-                                    .kerning(3.2)
-                                    .multilineTextAlignment(.center)
-                                    .foregroundColor(.black)
-                                    .frame(width: 117, height: 28, alignment: .center)
-                                    .padding(.bottom, 58)
-                                Text("Accounts")
-                                    .font(
-                                        Font.custom("Inter", size: 20)
-                                            .weight(.bold)
-                                    )
-                                    .kerning(3.2)
-                                    .multilineTextAlignment(.center)
-                                    .foregroundColor(.black)
-                                .frame(width: 117, height: 28, alignment: .center)}.padding(.top, -1000)}
+                                
+                                //Loads the account screen to the main display
+                                NavigationLink(destination: Accounts(), label: {
+                                    Text("Accounts")
+                                        .font(
+                                            Font.custom("Inter", size: 20)
+                                                .weight(.bold)
+                                        )
+                                })
+                                .kerning(3.2)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.black)
+                                .frame(width: 186, height: 28, alignment: .center)
+                                .padding(.bottom, 58)
+                                
+                                //Loads the account screen to the main display
+                                NavigationLink(destination: Pay(), label: {
+                                    Text("Pay")
+                                        .font(
+                                            Font.custom("Inter", size: 20)
+                                                .weight(.bold)
+                                        )
+                                })
+                                .kerning(3.2)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.black)
+                                .frame(width: 186, height: 28, alignment: .center)
+                                .padding(.bottom, 58)
+                                
+                                //Loads the account screen to the main display
+                                NavigationLink(destination: Recieve(), label: {
+                                    Text("Recieve")
+                                        .font(
+                                            Font.custom("Inter", size: 20)
+                                                .weight(.bold)
+                                        )
+                                })
+                                .kerning(3.2)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.black)
+                                .frame(width: 186, height: 28, alignment: .center)
+                                .padding(.bottom, 58)
+                                
+                                //Loads the account screen to the main display
+                                NavigationLink(destination: Settings(), label: {
+                                    Text("Settings")
+                                        .font(
+                                            Font.custom("Inter", size: 20)
+                                                .weight(.bold)
+                                        )
+                                })
+                                .kerning(3.2)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.black)
+                                .frame(width: 186, height: 28, alignment: .center)
+                                .padding(.bottom, 58)
+                                
+                                //Loads the account screen to the main display
+                                NavigationLink(destination: ForYou(), label: {
+                                    Text("For You")
+                                        .font(
+                                            Font.custom("Inter", size: 20)
+                                                .weight(.bold)
+                                        )
+                                })
+                                .kerning(3.2)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.black)
+                                .frame(width: 186, height: 28, alignment: .center)
+                                .padding(.bottom, 58)
+                                
+                                //Loads the account screen to the main display
+                                NavigationLink(destination: SplitCalc(), label: {
+                                    Text("Split Calc")
+                                        .font(
+                                            Font.custom("Inter", size: 20)
+                                                .weight(.bold)
+                                        )
+                                })
+                                .kerning(3.2)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.black)
+                                .frame(width: 186, height: 28, alignment: .center)
+                                .padding(.bottom, 58)
+                                
+                            }
+                            .padding(.top, -1600)
+                            
+                        }
                     }
                 }
+
+struct Accounts : View {
+    var body: some View{
+        ZStack {
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 444, height: 444)
+                .background(
+                    LinearGradient(
+                        stops: [
+                            Gradient.Stop(color: Color(red: 0, green: 0.64, blue: 1), location: 0.00),
+                            Gradient.Stop(color: Color(red: 0.61, green: 0.86, blue: 1).opacity(0), location: 1.00),
+                        ],
+                        startPoint: UnitPoint(x: 0.12, y: 0.24),
+                        endPoint: UnitPoint(x: 1, y: 1)
+                    )
+                )
+                .cornerRadius(444)
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 546, height: 546)
+                .background(
+                    LinearGradient(
+                        stops: [
+                            Gradient.Stop(color: Color(red: 0, green: 0.64, blue: 1), location: 0.00),
+                            Gradient.Stop(color: Color(red: 0.61, green: 0.86, blue: 1).opacity(0), location: 1.00),
+                        ],
+                        startPoint: UnitPoint(x: 0.12, y: 0.24),
+                        endPoint: UnitPoint(x: 1, y: 1)
+                    )
+                )
+                .cornerRadius(546)
+        }
+        .frame(width: 724, height: 957)
+        VStack{
+            Text("ACCOUNTS")
+                .font(
+                    Font.custom("Inter", size: 24)
+                        .weight(.semibold)
+                )
+                .kerning(1.68)
+                .multilineTextAlignment(.center)
+                .foregroundColor(.black)
+                .frame(width: 232, height: 72, alignment: .center)
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 390, height: 2)
+                .background(Color(red: 0, green: 0.52, blue: 0.55).opacity(0.18))
+            ZStack {
+                VStack{
+                    Text("COMBANK")
+                        .font(
+                            Font.custom("Inter", size: 15)
+                                .weight(.bold)
+                        )
+                        .kerning(2.4)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.black)
+                        .frame(width: 137, height: 25, alignment: .center)
+                    ZStack {
+                        HStack{
+                            Text("SAVINGS")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 70, height: 16, alignment: .leading)
+                            Text("$1,251,526.01")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 143, height: 13, alignment: .leading)
+                        }
+                    }
+                    .frame(width: 316, height: 16)
+                    ZStack {
+                        HStack{
+                            Text("SPENDINGS ")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 96, height: 16, alignment: .leading)
+                            Text("$30,532.21")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 143, height: 13, alignment: .leading)
+                        }
+                    }
+                    .frame(width: 316, height: 16)
+                }
+            }
+            .frame(width: 375, height: 66)
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 390, height: 2)
+                .background(Color(red: 0, green: 0.52, blue: 0.55).opacity(0.18))
+            ZStack {
+                VStack{
+                    Text("COMBANK")
+                        .font(
+                            Font.custom("Inter", size: 15)
+                                .weight(.bold)
+                        )
+                        .kerning(2.4)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.black)
+                        .frame(width: 137, height: 25, alignment: .center)
+                    ZStack {
+                        HStack{
+                            Text("SAVINGS")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 70, height: 16, alignment: .leading)
+                            Text("$1,251,526.01")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 143, height: 13, alignment: .leading)
+                        }
+                    }
+                    .frame(width: 316, height: 16)
+                    ZStack {
+                        HStack{
+                            Text("SPENDINGS ")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 96, height: 16, alignment: .leading)
+                            Text("$30,532.21")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 143, height: 13, alignment: .leading)
+                        }
+                    }
+                    .frame(width: 316, height: 16)
+                }
+            }
+            .frame(width: 375, height: 66)
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 390, height: 2)
+                .background(Color(red: 0, green: 0.52, blue: 0.55).opacity(0.18))
+            ZStack {
+                VStack{
+                    Text("COMBANK")
+                        .font(
+                            Font.custom("Inter", size: 15)
+                                .weight(.bold)
+                        )
+                        .kerning(2.4)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.black)
+                        .frame(width: 137, height: 25, alignment: .center)
+                    ZStack {
+                        HStack{
+                            Text("SAVINGS")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 70, height: 16, alignment: .leading)
+                            Text("$1,251,526.01")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 143, height: 13, alignment: .leading)
+                        }
+                    }
+                    .frame(width: 316, height: 16)
+                    ZStack {
+                        HStack{
+                            Text("SPENDINGS ")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 96, height: 16, alignment: .leading)
+                            Text("$30,532.21")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 143, height: 13, alignment: .leading)
+                        }
+                    }
+                    .frame(width: 316, height: 16)
+                }
+            }
+            .frame(width: 375, height: 66)
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 390, height: 2)
+                .background(Color(red: 0, green: 0.52, blue: 0.55).opacity(0.18))
+            ZStack {
+                VStack{
+                    Text("COMBANK")
+                        .font(
+                            Font.custom("Inter", size: 15)
+                                .weight(.bold)
+                        )
+                        .kerning(2.4)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.black)
+                        .frame(width: 137, height: 25, alignment: .center)
+                    ZStack {
+                        HStack{
+                            Text("SAVINGS")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 70, height: 16, alignment: .leading)
+                            Text("$1,251,526.01")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 143, height: 13, alignment: .leading)
+                        }
+                    }
+                    .frame(width: 316, height: 16)
+                    ZStack {
+                        HStack{
+                            Text("SPENDINGS ")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 96, height: 16, alignment: .leading)
+                            Text("$30,532.21")
+                                .font(
+                                    Font.custom("Inter", size: 13)
+                                        .weight(.light)
+                                )
+                                .kerning(2.08)
+                                .foregroundColor(.black)
+                                .frame(width: 143, height: 13, alignment: .leading)
+                        }
+                    }
+                    .frame(width: 316, height: 16)
+                }
+            }
+                .frame(width: 375, height: 66)
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 390, height: 2)
+                .background(Color(red: 0, green: 0.52, blue: 0.55).opacity(0.18))
+//            Text("PAY LINK™")
+//                .font(
+//                    Font.custom("Inter", size: 20)
+//                        .weight(.bold)
+//                )
+//                .multilineTextAlignment(.center)
+//                .foregroundColor(.black)
+//                .frame(width: 297, height: 35, alignment: .center)
+        }.padding(.top, -700)
+    }
+}
+
+struct Pay : View {
+    var body: some View{
+        Text("Pay")
+
+    }
+}
+
+struct Recieve : View {
+    var body: some View{
+        Text("Recieve")
+
+    }
+}
+
+struct Settings : View {
+    var body: some View{
+        Text("Settings")
+
+    }
+}
+
+struct ForYou : View {
+    var body: some View{
+        Text("For You")
+
+    }
+}
+
+struct SplitCalc : View {
+    var body: some View{
+        Text("Split Calculator")
+
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
